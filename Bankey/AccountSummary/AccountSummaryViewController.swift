@@ -1,0 +1,65 @@
+//
+//  AccountSummaryViewController.swift
+//  Bankey
+//
+//  Created by TheGIZzz on 25/3/2565 BE.
+//
+
+import UIKit
+
+import UIKit
+
+class AccountSummaryViewController: UIViewController {
+    
+    let games = [
+        "Pacman",
+        "Space Invaders",
+        "Space Patrol",
+    ]
+    
+    var tableView = UITableView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+}
+
+extension AccountSummaryViewController {
+    private func setup() {
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self // callback for action
+        tableView.dataSource = self // for data
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+}
+
+extension AccountSummaryViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = games[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return games.count
+    }
+}
+
+extension AccountSummaryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}

@@ -15,6 +15,7 @@ class LoginView: UIView {
     let passwordTextField = UITextField()
     let dividerView = UIView()
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         

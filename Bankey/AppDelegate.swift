@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func displayNextScreen() {
         if LocalState.hasOnboarded {
+            prepMainView()
             setRootViewController(mainViewController)
         }else {
             setRootViewController(onboardingContainerViewController)

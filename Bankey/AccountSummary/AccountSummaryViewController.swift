@@ -10,6 +10,7 @@ import UIKit
 class AccountSummaryViewController: UIViewController {
     
     var profile: Profile?
+    var accounts: [Account] = []
     
     var headerViewModel = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Welcome", name: "", date: Date())
     
@@ -144,15 +145,29 @@ extension AccountSummaryViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
-            
         }
         
-        fetchAccounts()
+        fetchAccounts(forUserId: "1") { result in
+            switch result {
+            case .success(let accounts):
+                self.accounts = accounts
+                self.configureTableCells(with: accounts)
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func configureTableHeaderView(with profile: Profile) {
         let vm = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Good moring", name:profile.firstName , date: Date())
         
         headerView.configure(viewModel: vm)
+    }
+    
+    private func configureTableCells(with accounts: [Account]) {
+        accountCellViewModels = accounts.map {
+            AccountSummaryCell.ViewModel(accountType: $0.type, accountName: $0.name, balance: $0.amount)
+        }
     }
 }

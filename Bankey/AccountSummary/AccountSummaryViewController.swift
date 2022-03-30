@@ -14,6 +14,7 @@ class AccountSummaryViewController: UIViewController {
     var headerViewModel = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Welcome", name: "", date: Date())
     
     var accountCellViewModels: [AccountSummaryCell.ViewModel] = []
+    var headerView = AccountSummaryHeaderView(frame: .zero)
     
     var tableView = UITableView()
     
@@ -64,13 +65,11 @@ extension AccountSummaryViewController {
     }
     
     private func setupTableHeaderView() {
-        let header = AccountSummaryHeaderView(frame: .zero)
-        
-        var size = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        var size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         size.width = UIScreen.main.bounds.width
-        header.frame.size = size
+        headerView.frame.size = size
         
-        tableView.tableHeaderView = header
+        tableView.tableHeaderView = headerView
     }
 }
 
@@ -153,5 +152,7 @@ extension AccountSummaryViewController {
     
     private func configureTableHeaderView(with profile: Profile) {
         let vm = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Good moring", name:profile.firstName , date: Date())
+        
+        headerView.configure(viewModel: vm)
     }
 }

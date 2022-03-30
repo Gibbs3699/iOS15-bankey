@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC2F4C9327F20CD9004BFEF9 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F4C9227F20CD9004BFEF9 /* Date+Utils.swift */; };
+		DC2F4C9527F20EA3004BFEF9 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F4C9427F20EA3004BFEF9 /* AccountSummaryViewController+Networking.swift */; };
 		DC3455CE27ED9C1900FBBA89 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3455CD27ED9C1900FBBA89 /* AccountSummaryCell.swift */; };
 		DC3455D027EEBA8900FBBA89 /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3455CF27EEBA8900FBBA89 /* DecimalUtils.swift */; };
 		DC3455D227EEBABA00FBBA89 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3455D127EEBABA00FBBA89 /* CurrencyFormatter.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC2F4C9227F20CD9004BFEF9 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		DC2F4C9427F20EA3004BFEF9 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		DC3455CD27ED9C1900FBBA89 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		DC3455CF27EEBA8900FBBA89 /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
 		DC3455D127EEBABA00FBBA89 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				DC3455D127EEBABA00FBBA89 /* CurrencyFormatter.swift */,
 				DC3455E227EF494200FBBA89 /* NSNotificationName.swift */,
 				DC3455E427EF4C7300FBBA89 /* UITextField+SecureToggle.swift */,
+				DC2F4C9227F20CD9004BFEF9 /* Date+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				DC3455CC27ED9C0200FBBA89 /* Cells */,
 				DC3455CB27ED9BF200FBBA89 /* Header */,
 				DCDC47EC27ED5B4A007497AB /* AccountSummaryViewController.swift */,
+				DC2F4C9427F20EA3004BFEF9 /* AccountSummaryViewController+Networking.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCDC47E827ECCF46007497AB /* UIViewController+Utils.swift in Sources */,
+				DC2F4C9327F20CD9004BFEF9 /* Date+Utils.swift in Sources */,
 				DCDC47DC27E748C3007497AB /* LoginView.swift in Sources */,
 				DCDC47E627ECC507007497AB /* LocalState.swift in Sources */,
 				DCDC47EF27ED5E12007497AB /* AccountSummaryHeaderView.swift in Sources */,
@@ -330,6 +337,7 @@
 				DCDC47ED27ED5B4A007497AB /* AccountSummaryViewController.swift in Sources */,
 				DCDC47C327E73A9F007497AB /* AppDelegate.swift in Sources */,
 				DCDC47DF27E8BFE7007497AB /* OnboardingContainerViewController.swift in Sources */,
+				DC2F4C9527F20EA3004BFEF9 /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

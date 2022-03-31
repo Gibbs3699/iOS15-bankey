@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DC2F4C9327F20CD9004BFEF9 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F4C9227F20CD9004BFEF9 /* Date+Utils.swift */; };
 		DC2F4C9527F20EA3004BFEF9 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F4C9427F20EA3004BFEF9 /* AccountSummaryViewController+Networking.swift */; };
+		DC2F4C9A27F5F351004BFEF9 /* ProfileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F4C9927F5F351004BFEF9 /* ProfileTest.swift */; };
+		DC2F4C9C27F5F4AF004BFEF9 /* AccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F4C9B27F5F4AF004BFEF9 /* AccountTest.swift */; };
 		DC3455CE27ED9C1900FBBA89 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3455CD27ED9C1900FBBA89 /* AccountSummaryCell.swift */; };
 		DC3455D027EEBA8900FBBA89 /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3455CF27EEBA8900FBBA89 /* DecimalUtils.swift */; };
 		DC3455D227EEBABA00FBBA89 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3455D127EEBABA00FBBA89 /* CurrencyFormatter.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		DC2F4C9227F20CD9004BFEF9 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		DC2F4C9427F20EA3004BFEF9 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
+		DC2F4C9927F5F351004BFEF9 /* ProfileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTest.swift; sourceTree = "<group>"; };
+		DC2F4C9B27F5F4AF004BFEF9 /* AccountTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTest.swift; sourceTree = "<group>"; };
 		DC3455CD27ED9C1900FBBA89 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		DC3455CF27EEBA8900FBBA89 /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
 		DC3455D127EEBABA00FBBA89 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -89,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC2F4C9727F5F2F1004BFEF9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DC3455E027EEC4E400FBBA89 /* CurrencyFormatterTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DC2F4C9827F5F2F5004BFEF9 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				DC2F4C9927F5F351004BFEF9 /* ProfileTest.swift */,
+				DC2F4C9B27F5F4AF004BFEF9 /* AccountTest.swift */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
 		DC3455CB27ED9BF200FBBA89 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +130,8 @@
 		DC3455D827EEBEC300FBBA89 /* BankeyUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				DC3455E027EEC4E400FBBA89 /* CurrencyFormatterTests.swift */,
+				DC2F4C9827F5F2F5004BFEF9 /* AccountSummary */,
+				DC2F4C9727F5F2F1004BFEF9 /* Utils */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -312,6 +334,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC3455E127EEC4E400FBBA89 /* CurrencyFormatterTests.swift in Sources */,
+				DC2F4C9C27F5F4AF004BFEF9 /* AccountTest.swift in Sources */,
+				DC2F4C9A27F5F351004BFEF9 /* ProfileTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

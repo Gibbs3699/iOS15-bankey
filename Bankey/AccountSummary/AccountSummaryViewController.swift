@@ -32,6 +32,8 @@ class AccountSummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
+        print("accountCellViewModels ---> \(accountCellViewModels)")
     }
 }
 
@@ -39,11 +41,10 @@ extension AccountSummaryViewController {
     private func setup() {
         setupTableView()
         setupTableHeaderView()
-        fetchAccounts()
         setupNavigationBar()
         setupRefreshControl()
         setupSkeletons()
-//        fetchData()
+        fetchData()
     }
     
     private func setupTableView() {
@@ -161,7 +162,18 @@ extension AccountSummaryViewController {
     }
     
     @objc func refreshContent() {
+        reset()
+        setupSkeletons()
+        tableView.reloadData()
         fetchData()
+        
+        print("refreshing....")
+    }
+    
+    private func reset() {
+        profile = nil
+        accounts = []
+        isLoaded = false
     }
 }
 
@@ -195,9 +207,15 @@ extension AccountSummaryViewController {
         }
         
         group.notify(queue: .main) {
-            self.isLoaded = true //
-            self.tableView.reloadData()
             self.tableView.refreshControl?.endRefreshing()
+            
+            guard let profile = self.profile else { return }
+            
+            self.isLoaded = true //
+
+            self.configureTableCells(with: self.accounts)
+            self.configureTableHeaderView(with: profile)
+            self.tableView.reloadData()
         }
     }
     
